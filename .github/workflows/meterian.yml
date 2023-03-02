@@ -1,6 +1,11 @@
 name: Meterian Scanner workflow
 
-on: push
+on:
+  push:
+    branches:
+      - '*'
+  schedule:
+    - cron: '0 23 * * 6'
 
 jobs:
     meterian_scan:
